@@ -1,3 +1,4 @@
-var cpuid = require('./build/Release/cpuid'),
+var cpuid = require('./index'),
 	util = require('util');
-console.log(util.inspect(cpuid.getCPUID()));
+
+console.log(util.inspect(cpuid()));

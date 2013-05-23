@@ -190,6 +190,7 @@ namespace cpuid {
 		data->Set(String::New("physicalCores"), Integer::New(cpuData.num_cores));
 		data->Set(String::New("logicalCores"), Integer::New(cpuData.num_logical_cpus));
 		data->Set(String::New("totalCores"), Integer::New(cpuData.total_logical_cpus));
+		data->Set(String::New("clockSpeed"), Integer::New(cpu_clock()));
 
 		Local<Object> features = Object::New();
 		data->Set(String::New("features"), features);
