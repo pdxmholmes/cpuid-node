@@ -2,7 +2,7 @@
 	"author": "Matt Holmes <mholmescode@gmail.com>",
 	"name": "cpuid",
 	"description": "Simple to use wrapper around LibCPUID. Gives extremely detailed information about the CPU(s) your code is running on.",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"repository": {
 		"type": "git",
 		"url": "git://github.com/brainling/cpuid-node.git"
@@ -14,10 +14,14 @@
 		"node": ">=0.8.0"
 	},
 	"readmeFilename": "README.md",
-	"gitHead": "d507bc3294c30fb16cd31ae614a5ef08a850e8df",
 	"bugs": {
 		"url": "https://github.com/brainling/cpuid-node/issues"
 	},
 	"main": "index.js",
-	"license": "BSD"
+	"license": "BSD",
+	"keywords" : [
+		"cpu",
+		"system",
+		"os"		
+	]
 }
