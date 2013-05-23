@@ -19,6 +19,7 @@
 debug/
 release/
 build/
+docs/
 _UpgradeReport_Files/
 
 # VS stuff
