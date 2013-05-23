@@ -9,6 +9,12 @@
 		],
 
 		"target_name": "cpuid",
-		"sources": [ "src/cpuid.cc" ]
+		"sources": [ "src/cpuid.cc" ],
+
+		"conditions": [
+			['OS=="linux"', {
+				'defines': ['HAVE_STDINT_H']
+			}]
+		]
 	}]
 }

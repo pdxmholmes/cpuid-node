@@ -1,7 +1,6 @@
 #include <node.h>
 #include <v8.h>
 #include <libcpuid.h>
-#include <strstream>
 #include "cpuid.h"
 
 namespace cpuid {

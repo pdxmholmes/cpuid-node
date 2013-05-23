@@ -49,6 +49,9 @@
 					}]
 				]
 			}],
+			['OS=="linux"', {
+				'defines': ['HAVE_STDINT_H']
+			}]
 		]
 	}]
 }
