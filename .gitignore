@@ -6,8 +6,27 @@
 # Compiled Dynamic libraries
 *.so
 *.dylib
+*.dll
+*.exe
 
 # Compiled Static libraries
 *.lai
 *.la
 *.a
+*.lib
+
+# Dirs
+debug/
+release/
+build/
+_UpgradeReport_Files/
+
+# VS stuff
+*.suo
+*.sdf
+*.vcproj
+*.vcxproj
+*.filters
+*.dsp
+*.dsw
+UpgradeLog.*
