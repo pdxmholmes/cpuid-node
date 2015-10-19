@@ -205,7 +205,7 @@ NAN_METHOD(GetCPUID) {
 }
 
 NAN_MODULE_INIT(InitAll) {
-	Nan::Set(target, Nan::New("GetCPUID").ToLocalChecked(),
+	Nan::Set(target, Nan::New("getCPUID").ToLocalChecked(),
 		Nan::GetFunction(Nan::New<FunctionTemplate>(GetCPUID)).ToLocalChecked());
 }
 
