@@ -12,6 +12,8 @@
 		"target_name": "cpuid",
 		"sources": [ "src/cpuid.cc" ],
 
+		"win_delay_load_hook": 'true',
+
 		"conditions": [
 			['OS=="linux"', {
 				'defines': ['HAVE_STDINT_H']
