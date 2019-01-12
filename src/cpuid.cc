@@ -127,6 +127,7 @@ static void fillFeatures(Handle<Object> features, cpu_id_t& cpuData) {
 	features->Set(Nan::New("multiplierSteps100mhz").ToLocalChecked(), Nan::New(cpuData.flags[CPU_FEATURE_100MHZSTEPS]));
 	features->Set(Nan::New("hardwarePState").ToLocalChecked(), Nan::New(cpuData.flags[CPU_FEATURE_HWPSTATE]));
 	features->Set(Nan::New("constantTSCTicks").ToLocalChecked(), Nan::New(cpuData.flags[CPU_FEATURE_CONSTANT_TSC]));
+	features->Set(Nan::New("avx2").ToLocalChecked(), Nan::New(cpuData.flags[CPU_FEATURE_AVX2]));
 }
 
 static void fillCache(Handle<Object> cache, cpu_id_t& cpuData) {

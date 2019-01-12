@@ -1,21 +1,25 @@
 {
   "author": "Matt Holmes <mholmescode@gmail.com>",
-  "name": "cpuid",
+  "contributors": [
+    "Michael Hartmann"
+  ],
+  "name": "refx-cpuid",
   "description": "Simple to use wrapper around LibCPUID. Gives extremely detailed information about the CPU(s) your code is running on.",
-  "version": "0.1.3",
+  "version": "0.1.5",
   "repository": {
     "type": "git",
-    "url": "git://github.com/brainling/cpuid-node.git"
+    "url": "git://github.com/reFX/cpuid-node.git"
   },
   "scripts": {
-    "install": "(node-gyp rebuild 2> builderror.log) || (exit 0)"
+    "install": "(node-gyp rebuild 2> builderror.log) || (exit 0)",
+    "start": "node ./test.js"
   },
   "engines": {
     "node": ">=0.8.0"
   },
   "readmeFilename": "README.md",
   "bugs": {
-    "url": "https://github.com/brainling/cpuid-node/issues"
+    "url": "https://github.com/reFX/cpuid-node/issues"
   },
   "main": "index.js",
   "license": "BSD",

@@ -40,9 +40,13 @@ cpu_rdtsc Proc
 cpu_rdtsc endp
 
 ; procedure busy_sse_loop
-; 
-busy_sse_loop Proc cycles:DWORD
-	mov	eax, cycles
+; Signature: void busy_sse_loop(int cycles)
+busy_sse_loop Proc
+	; save xmm6 & xmm7 into the shadow area, as Visual C++ 2008
+	; expects that we don't touch them:
+	movups	[rsp + 8],	xmm6
+	movups	[rsp + 24],	xmm7
+
 	xorps	xmm0,	xmm0
 	xorps	xmm1,	xmm1
 	xorps	xmm2,	xmm2
@@ -51,7 +55,7 @@ busy_sse_loop Proc cycles:DWORD
 	xorps	xmm5,	xmm5
 	xorps	xmm6,	xmm6
 	xorps	xmm7,	xmm7
-	;--
+	; --
 	align 16
 bsLoop:
 	; 0:
@@ -342,9 +346,14 @@ bsLoop:
 	addps	xmm5,	xmm6
 	addps	xmm6,	xmm7
 	addps	xmm7,	xmm0
-	;----------------------
-	dec		eax
+	; ----------------------
+	dec		ecx
 	jnz		bsLoop
+
+	; restore xmm6 & xmm7:
+	movups	xmm6,	[rsp + 8]
+	movups	xmm7,	[rsp + 24]
+	ret
 busy_sse_loop endp
 
 END
